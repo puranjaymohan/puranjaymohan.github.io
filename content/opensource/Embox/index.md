@@ -1,5 +1,5 @@
 ---
-date: '2019-12-27'
+date: '2020-12-27'
 company: 'Embox'
 
 range: 'Embox is a configurable RTOS designed for resource constrained and embedded systems. I Ported Embox to new hardware. Around 15 PRs Merged.'

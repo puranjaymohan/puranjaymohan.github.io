@@ -13,6 +13,11 @@ const GlobalStyle = createGlobalStyle`
     width: 100%;
   }
 
+  html,
+body {
+  scroll-behavior: smooth;
+}
+
   *,
   *:before,
   *:after {
