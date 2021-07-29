@@ -2,6 +2,7 @@
 date: '2019-03-01'
 title: 'AI Intern'
 company: 'Fitnano Technologies Pvt Ltd'
+tab: 'Fitnano'
 location: 'Greater Noida, India'
 range: 'March 2019 - April 2019'
 url: 'https://fitnano.com/'

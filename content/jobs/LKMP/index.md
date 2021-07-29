@@ -2,6 +2,7 @@
 date: '2020-06-21'
 title: 'Linux Kernel Mentee'
 company: 'The Linux Foundation'
+tab: 'LKMP'
 location: 'Remote'
 range: 'June 2020 - Jan 2021'
 url: 'https://mentorship.lfx.linuxfoundation.org/project/5cdea024-4cc8-4e48-bc61-3660b5f06978'

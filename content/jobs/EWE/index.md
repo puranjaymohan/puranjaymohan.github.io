@@ -2,6 +2,7 @@
 date: '2019-12-27'
 title: 'Embedded Design Intern'
 company: 'Electrowaves Electronics Pvt Ltd'
+tab: 'EWE'
 location: 'Panchkula, Haryana, India'
 range: 'December 2019 - Present'
 url: 'https://electrowaveselectronics.com/'

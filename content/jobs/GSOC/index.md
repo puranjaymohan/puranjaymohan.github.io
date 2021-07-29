@@ -1,6 +1,7 @@
 ---
 date: '2021-05-15'
 title: 'Student Developer'
+tab: 'GSOC 2021'
 company: 'Google Summer of Code'
 location: 'Remote'
 range: 'May 2021 - Present'
