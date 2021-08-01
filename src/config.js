@@ -34,8 +34,12 @@ module.exports = {
       url: '/#opensource',
     },
     {
-      name: 'Work',
+      name: 'Projects',
       url: '/#projects',
+    },
+    {
+      name: 'Research',
+      url: '/#research',
     },
     {
       name: 'Contact',

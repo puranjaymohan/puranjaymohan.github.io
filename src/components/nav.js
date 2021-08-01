@@ -134,7 +134,7 @@ const Nav = ({ isHome }) => {
   const prefersReducedMotion = usePrefersReducedMotion();
 
   const handleScroll = () => {
-    setScrolledToTop(window.pageYOffset < 50);
+    //setScrolledToTop(window.pageYOffset < 50);
   };
 
   useEffect(() => {
