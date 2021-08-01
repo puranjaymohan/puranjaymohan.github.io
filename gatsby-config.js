@@ -4,9 +4,9 @@ module.exports = {
   siteMetadata: {
     title: 'Puranjay Mohan',
     description:
-      'an engineer specializing in Electronics, Embedded Systems, and Linux Kernel Development.',
-    siteUrl: 'https://puranjaymohan.github.io.', // No trailing slash allowed!
-    image: '', // Path to your image you placed in the 'static' folder
+      'Puranjay Mohan is an engineer specializing in Electronics, Embedded Systems, and Linux Kernel Development.',
+    siteUrl: 'https://puranjay.netlify.app', // No trailing slash allowed!
+    image: '/og.png', // Path to your image you placed in the 'static' folder
     twitterUsername: '',
   },
   plugins: [
