@@ -126,7 +126,7 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['Linux/UNIX', 'Embedded Systems', 'Yocto', 'RTOS', 'GNU Make', 'Git', 'Raspberry Pi', 'Electronics', ' ARM Microcontrollers', 'Tensorflow-lite-micro'];
+  const skills = ['Linux Kernel Development', 'Embedded Systems', 'Yocto', 'RTOS', 'Device Drivers', 'Git', 'Systems Programming', 'Electronics', ' ARM Microcontrollers', 'Tensorflow-lite-micro'];
   const langs = ['C', 'Assembly (x86, Arm)', 'C++', 'Shell Scripting', 'Python', 'Numpy', 'Matplotlib', 'Keras', 'Matlab and Simulink', 'LT SPICE'];
 
   return (
