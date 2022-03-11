@@ -144,11 +144,6 @@ Since then I have tried my hands on Linux kernel development, RTOS, PCB design, 
 I have decided to build my career around Linux kernel, Embedded systems, Computer architecture and other related fields.
 I am a strong supporter of open source and love to contribute to projects like Linux and Zephyr
             </p>
-
-            <p>
-              These days I am working on developing an {' '}<a href="https://wiki.analog.com/software/linux/docs/iio/iio">IIO Driver</a> for an {' '}<a href="https://www.analog.com/en/index.html">Analog Devices'</a> accelerometer as a part of {' '}<a href="https://summerofcode.withgoogle.com/">GSOC 2021</a> with {' '}<a href="https://www.linuxfoundation.org/">The Linux Foundation</a>.
-            </p>
-
             <p>My Skills and Knowledge Set:</p>
           </div>
 
