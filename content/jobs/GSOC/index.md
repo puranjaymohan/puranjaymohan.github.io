@@ -4,7 +4,7 @@ title: 'Student Developer'
 tab: 'GSOC 2021'
 company: 'Google Summer of Code'
 location: 'Remote'
-range: 'May 2021 - Present'
+range: 'May 2021 - Aug 2021'
 url: 'https://summerofcode.withgoogle.com/projects/#5247750473515008'
 ---
 
