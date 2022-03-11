@@ -63,9 +63,9 @@ const Hero = () => {
   const three = <h3 className="big-heading">I build the hardware-software interface.</h3>;
   const four = (
     <p>
-      I'm an engineer specializing in Electronics, Embedded Systems, and Linux Kernel Development. Currently, I'm focused on building IIO drivers as a part of{' '}
-      <a href="https://summerofcode.withgoogle.com/projects/#5247750473515008" target="_blank" rel="noreferrer">
-        Google Summer of Code
+      I'm an engineer specializing in Electronics, Embedded Systems, and Linux Kernel Development. Currently, I'm focused on building device drivers as a part of{' '}
+      <a href="https://www.ti.com/" target="_blank" rel="noreferrer">
+        Texas Instruments
       </a>
       .
     </p>
