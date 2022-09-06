@@ -63,9 +63,9 @@ const Hero = () => {
   const three = <h3 className="big-heading">I build the hardware-software interface.</h3>;
   const four = (
     <p>
-      I'm an engineer specializing in Electronics, Embedded Systems, and Linux Kernel Development. Currently, I'm focused on building device drivers as a part of{' '}
-      <a href="https://www.ti.com/" target="_blank" rel="noreferrer">
-        Texas Instruments
+      I'm an engineer specializing in Electronics, Embedded Systems, and Linux Kernel Development. Currently, I'm focused on improving the security and stability of the kernel running on the fleet of more than 2 million hosts at {' '}
+      <a href="https://aws.amazon.com/ec2/" target="_blank" rel="noreferrer">
+        Amazon EC2
       </a>
       .
     </p>
