@@ -63,11 +63,17 @@ const Hero = () => {
   const three = <h3 className="big-heading">I build the hardware-software interface.</h3>;
   const four = (
     <p>
-      I'm an engineer specializing in Electronics, Embedded Systems, and Linux Kernel Development. Currently, I'm focused on improving the security and stability of the kernel running on the fleet of more than 2 million hosts at {' '}
+      I'm an engineer specializing in Electronics, Embedded Systems, and Linux Kernel Development.
+      Currently, I'm focused on improving the security and stability of the kernel running on the
+      fleet of more than 2 million hosts at{' '}
       <a href="https://aws.amazon.com/ec2/" target="_blank" rel="noreferrer">
         Amazon EC2
       </a>
-      .
+      .<br></br>
+      <br></br>
+      <a href="https://keyserver.ubuntu.com/pks/lookup?search=5f52d6b3647bb20c072c859d7e271b2acd1d430d&fingerprint=on&op=index">
+        5F52 D6B3 647B B20C 072C 859D 7E27 1B2A CD1D 430D
+      </a>
     </p>
   );
   const five = (
