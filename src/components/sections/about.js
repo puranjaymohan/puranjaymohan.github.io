@@ -167,8 +167,8 @@ const About = () => {
             <p>
               At Meta I work more broadly across BPF and the kernel pieces it depends on: verifier
               state pruning, arena memory, iterator inlining, RCU callbacks that finish as soon as a
-              grace period allows, and a memory model for BPF that Paul McKenney and I have been
-              working on, along with a tool to test it on real hardware.
+              grace period allows, and a memory model for BPF, along with a tool to test it on real
+              hardware.
             </p>
             <p>
               The problems I like best sit where the compiler, the CPU's memory ordering and a

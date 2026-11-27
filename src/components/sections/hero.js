@@ -93,17 +93,13 @@ const Hero = () => {
   const four = (
     <>
       <p>
-        I'm a kernel engineer at Meta in London. Upstream, I maintain the arm64 and arm32 BPF JITs,
-        and most of my time goes into BPF: code generation, the verifier, and getting BPF programs
-        to run as well on Arm as they do on x86. These days I'm also working on RCU and on a proper
-        memory model for BPF, both with Paul McKenney.
+        I'm a kernel engineer at Meta in London. Most of my work is in BPF and the core kernel
+        around it, and nearly all of it goes upstream.
       </p>
       <div className="facts">
         <KernelStatsInline />
         <span className="sep">/</span>
         <span>BPF JIT maintainer, arm64 &amp; arm32</span>
-        <span className="sep">/</span>
-        <span>London</span>
       </div>
       <div className="pgp">
         PGP{' '}
