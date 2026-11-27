@@ -2,7 +2,7 @@
 order: 3
 tab: 'RCU'
 title: 'RCU'
-summary: 'Work with Paul McKenney, merged through the RCU tree.'
+summary: 'Reviewer for RCU since 2026. My RCU work goes in through the RCU tree.'
 url: 'https://lists.openwall.net/linux-kernel/2026/06/24/1055'
 ---
 

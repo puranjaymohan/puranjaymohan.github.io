@@ -168,7 +168,15 @@ const About = () => {
               At Meta I work more broadly across BPF and the kernel pieces it depends on: verifier
               state pruning, arena memory, iterator inlining, RCU callbacks that finish as soon as a
               grace period allows, and a memory model for BPF, along with a tool to test it on real
-              hardware.
+              hardware. I also help maintain{' '}
+              <a
+                href="https://shirudo.dev/"
+                className="inline-link"
+                target="_blank"
+                rel="noreferrer">
+                shirudo
+              </a>
+              , a BPF-based security platform for Linux.
             </p>
             <p>
               The problems I like best sit where the compiler, the CPU's memory ordering and a

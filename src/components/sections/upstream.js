@@ -271,6 +271,9 @@ const Upstream = () => {
           Maintainer, <strong>BPF JIT for ARM</strong> (since 2023, alongside Russell King)
         </li>
         <li>
+          Reviewer, <strong>RCU</strong> (since 2026)
+        </li>
+        <li>
           Reviewer, <strong>BPF JIT for RISC-V (64-bit)</strong> (since 2024)
         </li>
         <li>
