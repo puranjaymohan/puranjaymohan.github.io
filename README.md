@@ -32,3 +32,12 @@ npm start
 ```
 
 `npm run build && npm run serve` for a production build.
+
+## Resume
+
+`static/resume.pdf` is generated from `resume/resume.html`. When a push changes anything
+under `resume/`, the GitHub Action in `.github/workflows/resume.yml` prints the PDF with
+headless Chrome and commits it, and Netlify deploys that commit.
+
+To preview locally, run `resume/build.sh` (needs Chrome or Chromium; set
+`CHROME=/path/to/chrome` if it isn't on PATH).

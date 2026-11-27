@@ -1,0 +1,34 @@
+# Rebuild static/resume.pdf whenever the resume source changes, and commit it.
+# Netlify then deploys the new PDF like any other commit.
+name: Build resume PDF
+
+on:
+  push:
+    paths:
+      - 'resume/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Chrome is preinstalled on GitHub's Ubuntu runners.
+      - name: Print resume to PDF
+        run: CHROME=google-chrome resume/build.sh
+
+      - name: Commit the PDF
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add static/resume.pdf
+          if git diff --cached --quiet; then
+            echo "resume.pdf unchanged"
+            exit 0
+          fi
+          git commit -m 'Rebuild resume PDF'
+          git push

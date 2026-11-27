@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<!--
+  Source for static/resume.pdf. Edit this file, then rebuild the PDF:
+
+    resume/build.sh
+
+  It prints this page with headless Chrome. Opening it in any browser and
+  using Print > Save as PDF (A4, no headers/footers) gives the same result.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Puranjay Mohan - Resume</title>
+<style>
+  @font-face { font-family: 'Calibre'; font-weight: 400; src: url('../src/fonts/Calibre/Calibre-Regular.woff2') format('woff2'); }
+  @font-face { font-family: 'Calibre'; font-weight: 400; font-style: italic; src: url('../src/fonts/Calibre/Calibre-RegularItalic.woff2') format('woff2'); }
+  @font-face { font-family: 'Calibre'; font-weight: 500; src: url('../src/fonts/Calibre/Calibre-Medium.woff2') format('woff2'); }
+  @font-face { font-family: 'Calibre'; font-weight: 600; src: url('../src/fonts/Calibre/Calibre-Semibold.woff2') format('woff2'); }
+  @font-face { font-family: 'SF Mono'; font-weight: 400; src: url('../src/fonts/SFMono/SFMono-Regular.woff2') format('woff2'); }
+
+  @page { size: A4; margin: 13mm 15mm; }
+
+  :root {
+    --ink: #1b2330;
+    --muted: #5a6577;
+    --accent: #0b7a64;
+    --rule: #d5dbe3;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  body {
+    margin: 0;
+    color: var(--ink);
+    font-family: 'Calibre', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 10.6pt;
+    line-height: 1.32;
+  }
+
+  /* On screen, show it as a sheet of paper. */
+  @media screen {
+    body { background: #eef1f5; padding: 24px 0; }
+    .page { width: 210mm; min-height: 297mm; margin: 0 auto; padding: 13mm 15mm; background: #fff; box-shadow: 0 2px 12px rgba(0,0,0,.12); }
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  header { margin-bottom: 10px; }
+
+  h1 {
+    margin: 0;
+    font-size: 25pt;
+    font-weight: 600;
+    letter-spacing: -0.2px;
+    line-height: 1;
+  }
+
+  .tagline {
+    margin: 4px 0 6px;
+    color: var(--accent);
+    font-size: 12pt;
+    font-weight: 500;
+  }
+
+  .contact {
+    color: var(--muted);
+    font-family: 'SF Mono', Menlo, monospace;
+    font-size: 7.9pt;
+    white-space: nowrap;
+  }
+  .contact span + span::before { content: '·'; margin: 0 5px; color: var(--muted); }
+
+  .summary { margin: 10px 0 0; }
+
+  h2 {
+    margin: 13px 0 6px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid var(--rule);
+    color: var(--accent);
+    font-family: 'SF Mono', Menlo, monospace;
+    font-size: 8.6pt;
+    font-weight: 400;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+  }
+
+  .role { margin-bottom: 9px; }
+
+  .role-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .role-head .org { font-size: 12pt; font-weight: 600; }
+  .role-head .org .title { color: var(--muted); font-weight: 400; }
+  .role-head .when {
+    color: var(--muted);
+    font-family: 'SF Mono', Menlo, monospace;
+    font-size: 8.2pt;
+    white-space: nowrap;
+  }
+
+  .role-lead { margin: 2px 0 3px; color: var(--muted); font-style: italic; }
+
+  ul { margin: 0; padding-left: 14px; }
+  li { margin: 2.5px 0; padding-left: 2px; }
+  li::marker { color: var(--accent); }
+  li b { font-weight: 600; }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 16px;
+    row-gap: 3px;
+  }
+  .grid .meta {
+    color: var(--muted);
+    font-family: 'SF Mono', Menlo, monospace;
+    font-size: 8.2pt;
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  .small { color: var(--muted); font-size: 9.8pt; }
+
+  code { font-family: 'SF Mono', Menlo, monospace; font-size: 8.6pt; }
+</style>
+</head>
+<body>
+<div class="page">
+
+<header>
+  <h1>Puranjay Mohan</h1>
+  <div class="tagline">Software Engineer · Linux Kernel · London, UK</div>
+  <div class="contact">
+    <span><a href="mailto:puranjay12@gmail.com">puranjay12@gmail.com</a></span>
+    <span><a href="https://puranjay.netlify.app">puranjay.netlify.app</a></span>
+    <span><a href="https://github.com/puranjaymohan">github.com/puranjaymohan</a></span>
+    <span><a href="https://www.linkedin.com/in/puranjaymohan">linkedin.com/in/puranjaymohan</a></span>
+  </div>
+  <p class="summary">
+    Kernel engineer leading arm64 fleet enablement and live patching across the Linux kernel, from
+    the BPF JIT and verifier to RCU, perf and objtool. Upstream maintainer of the arm64 and arm32
+    BPF JITs, with 270+ commits in mainline since 2019. Works with upstream maintainers on technical
+    direction, reviews other engineers' patches as a maintainer, and speaks at the kernel's main
+    developer conferences.
+  </p>
+</header>
+
+<h2>Experience</h2>
+
+<div class="role">
+  <div class="role-head">
+    <div class="org">Meta <span class="title">· Software Engineer, London</span></div>
+    <div class="when">Dec 2025 – Present</div>
+  </div>
+  <ul>
+    <li><b>Lead arm64 enablement of the kernel for Meta's fleet</b>, driving work across BPF, RCU, perf and live patching; landed 120+ commits in mainline in my first year.</li>
+    <li><b>Leading the work to close the BPF performance gap between arm64 and x86.</b> Built the benchmarks that expose the gaps, fixed them in the JIT and BPF core, and presented the roadmap to BPF maintainers at LSF/MM/BPF 2026.</li>
+    <li><b>Made the BPF verifier scale to larger programs</b> by reworking state pruning and register tracking, so production programs load faster and fewer hit the verifier's complexity limit.</li>
+    <li><b>Cut memory reclaim latency in RCU</b> by letting callbacks complete on expedited grace periods, and made <code>call_rcu()</code> safe from any context, opening it up to BPF programs.</li>
+    <li><b>Strengthened live patching</b> with an upstream test suite for objtool's livepatch generation that catches the cases that historically produced unsafe patches.</li>
+    <li><b>Hardened BPF's kernel interface</b> by making trusted arguments the default for every kfunc and fixing memory-safety bugs in core iterators.</li>
+  </ul>
+</div>
+
+<div class="role">
+  <div class="role-head">
+    <div class="org">Amazon Web Services <span class="title">· Software Engineer, Dresden</span></div>
+    <div class="when">Sep 2022 – Nov 2025</div>
+  </div>
+  <ul>
+    <li><b>Led kernel live patching for EC2</b>, shipping security and stability fixes to a fleet of 2M+ hosts at runtime with kpatch instead of rebooting customer workloads.</li>
+    <li><b>Drove BPF enablement on arm64.</b> Took over as upstream maintainer of the arm64 and arm32 BPF JITs and closed most of their feature gap with x86: exceptions, private stacks, timed <code>may_goto</code>, inlined per-CPU helpers.</li>
+    <li><b>Reduced BPF memory and iTLB overhead</b> by moving the arm64 and RISC-V JITs to the shared program-pack allocator, so BPF programs share a few huge pages instead of each taking its own.</li>
+    <li><b>Unblocked BPF on CFI-hardened kernels</b> by making JITed code work with kCFI on arm64 and RISC-V.</li>
+    <li><b>Started the BPF memory model effort</b>, defining the ordering guarantees every JIT must provide, and built <a href="https://github.com/puranjaymohan/blitmus">blitmus</a> to check them on real hardware.</li>
+  </ul>
+</div>
+
+<h2>Upstream Leadership</h2>
+<div class="grid">
+  <div><b>Maintainer</b>, BPF JIT for ARM64 (with Alexei Starovoitov and Daniel Borkmann)</div><div class="meta">2024 – Present</div>
+  <div><b>Maintainer</b>, BPF JIT for ARM (with Russell King)</div><div class="meta">2023 – Present</div>
+  <div><b>Reviewer</b>, BPF JIT for RISC-V 64-bit</div><div class="meta">2024 – Present</div>
+  <div><b>Maintainer</b>, ADXL355 and TMP117 IIO drivers</div><div class="meta">2021 – Present</div>
+</div>
+
+<h2>Talks</h2>
+<div class="grid">
+  <div>blitmus: Litmus-testing the eBPF memory model on real hardware</div><div class="meta">LPC 2026, Prague</div>
+  <div>Closing the BPF performance gap between arm64 and x86</div><div class="meta">LSF/MM/BPF 2026, Zagreb</div>
+  <div>Letting RCU callbacks use expedited grace periods</div><div class="meta">LSF/MM/BPF 2026, Zagreb</div>
+  <div>BPF instruction-level memory model progress</div><div class="meta">LPC 2024, Vienna</div>
+</div>
+
+<h2>Education</h2>
+<div class="grid">
+  <div>B.Tech. Electronics and Communication Engineering, SRM Institute of Science and Technology</div><div class="meta">2018 – 2022</div>
+</div>
+<p class="small" style="margin:4px 0 0">
+  Publications: TinyML on Cortex-M7 microcontrollers, Springer LNEE 2021 and IEEE RAICS 2020.
+</p>
+
+</div>
+</body>
+</html>
