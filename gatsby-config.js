@@ -4,7 +4,7 @@ module.exports = {
   siteMetadata: {
     title: 'Puranjay Mohan',
     description:
-      'Puranjay Mohan is an engineer specializing in Electronics, Embedded Systems, and Linux Kernel Development.',
+      'Puranjay Mohan is a Linux kernel engineer at Meta. He maintains the arm64 and arm32 BPF JITs upstream and works on BPF, the verifier, RCU and the BPF memory model.',
     siteUrl: 'https://puranjay.netlify.app', // No trailing slash allowed!
     image: '/og.png', // Path to your image you placed in the 'static' folder
     twitterUsername: '',
@@ -42,20 +42,6 @@ module.exports = {
       options: {
         name: 'content',
         path: `${__dirname}/content/`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `posts`,
-        path: `${__dirname}/content/posts`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `projects`,
-        path: `${__dirname}/content/projects`,
       },
     },
     {
@@ -147,12 +133,6 @@ module.exports = {
             },
           },
         ],
-      },
-    },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: 'UA-45666519-2',
       },
     },
   ],

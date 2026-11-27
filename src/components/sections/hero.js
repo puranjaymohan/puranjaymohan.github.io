@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { email } from '@config';
 import { navDelay, loaderDelay } from '@utils';
 import { usePrefersReducedMotion } from '@hooks';
+import { KernelStatsInline } from '../kernelStats';
 
 const StyledHeroSection = styled.section`
   ${({ theme }) => theme.mixins.flexCenter};
@@ -36,7 +37,35 @@ const StyledHeroSection = styled.section`
 
   p {
     margin: 20px 0 0;
-    max-width: 540px;
+    max-width: 560px;
+  }
+
+  .facts {
+    margin-top: 25px;
+    color: var(--light-slate);
+    font-family: var(--font-mono);
+    font-size: var(--fz-xs);
+    line-height: 1.8;
+
+    a {
+      ${({ theme }) => theme.mixins.inlineLink};
+    }
+
+    .sep {
+      margin: 0 10px;
+      color: var(--green);
+    }
+  }
+
+  .pgp {
+    margin-top: 10px;
+    color: var(--slate);
+    font-family: var(--font-mono);
+    font-size: var(--fz-xxs);
+
+    a {
+      ${({ theme }) => theme.mixins.inlineLink};
+    }
   }
 
   .email-link {
@@ -60,21 +89,32 @@ const Hero = () => {
 
   const one = <h1>Hi, my name is</h1>;
   const two = <h2 className="big-heading">Puranjay Mohan.</h2>;
-  const three = <h3 className="big-heading">I build the hardware-software interface.</h3>;
+  const three = <h3 className="big-heading">I work on the Linux kernel.</h3>;
   const four = (
-    <p>
-      I'm an engineer specializing in Electronics, Embedded Systems, and Linux Kernel Development.
-      Currently, I'm focused on improving the security and stability of the kernel running on the
-      fleet of more than 2 million hosts at{' '}
-      <a href="https://aws.amazon.com/ec2/" target="_blank" rel="noreferrer">
-        Amazon EC2
-      </a>
-      .<br></br>
-      <br></br>
-      <a href="https://keyserver.ubuntu.com/pks/lookup?search=5f52d6b3647bb20c072c859d7e271b2acd1d430d&fingerprint=on&op=index">
-        5F52 D6B3 647B B20C 072C 859D 7E27 1B2A CD1D 430D
-      </a>
-    </p>
+    <>
+      <p>
+        I'm a kernel engineer at Meta in London. Upstream, I maintain the arm64 and arm32 BPF JITs,
+        and most of my time goes into BPF: code generation, the verifier, and getting BPF programs
+        to run as well on Arm as they do on x86. These days I'm also working on RCU and on a proper
+        memory model for BPF, both with Paul McKenney.
+      </p>
+      <div className="facts">
+        <KernelStatsInline />
+        <span className="sep">/</span>
+        <span>BPF JIT maintainer, arm64 &amp; arm32</span>
+        <span className="sep">/</span>
+        <span>London</span>
+      </div>
+      <div className="pgp">
+        PGP{' '}
+        <a
+          href="https://keyserver.ubuntu.com/pks/lookup?search=5f52d6b3647bb20c072c859d7e271b2acd1d430d&fingerprint=on&op=index"
+          target="_blank"
+          rel="noreferrer">
+          5F52 D6B3 647B B20C 072C 859D 7E27 1B2A CD1D 430D
+        </a>
+      </div>
+    </>
   );
   const five = (
     <a href={`mailto:${email}`} className="email-link">

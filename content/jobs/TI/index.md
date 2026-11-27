@@ -3,12 +3,11 @@ date: '2022-01-10'
 title: 'Software Engineer Intern'
 tab: 'TI'
 company: 'Texas Instruments'
-location: 'Bangalore'
-range: 'Jan 2022 - Present'
+location: 'Bangalore, India'
+range: 'Jan 2022 - Jun 2022'
 url: 'https://www.ti.com/'
 ---
 
-- Part of the Linux Core Product Development Team that focuses on supporting the Linux kernel and Uboot on TI SOCs.
-- My work involves writing device driver in subsystems like net and remoteproc, sending patches to kernel mailing lists, receiving feedback from maitainers, and making changes.
-- The hardware setup involves using TI EVMs and Industrial development kits to test the kernel and uboot, to verify the functionality of drivers.
-- Learning outcomes:- Network Drivers, Remoterproc, device-tree, uboot, DMA, NAPI.
+- Linux core team, upstreaming support for the PRU-ICSS (programmable real-time units) on TI's SoCs.
+- Wrote and sent upstream the PRUSS platform consumer API and the PRU remoteproc consumer API, so client drivers can claim and configure PRU cores.
+- Wrote the device tree bindings for the ICSSG Ethernet driver that is built on top of those APIs.

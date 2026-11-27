@@ -41,7 +41,7 @@ const StyledProject = styled.li`
 
   &:nth-of-type(even) {
     .project-image {
-      padding-left : 100px;
+      padding-left: 100px;
     }
   }
 
@@ -89,7 +89,7 @@ const StyledProject = styled.li`
       }
     }
     .project-image {
-      padding-right : 100px;
+      padding-right: 100px;
       grid-column: 1 / 8;
 
       @media (max-width: 768px) {
@@ -374,7 +374,7 @@ const Research = () => {
   return (
     <section id="research">
       <h2 className="numbered-heading" ref={revealTitle}>
-        My Publications
+        Earlier Research
       </h2>
 
       <StyledProjectsGrid>
@@ -392,7 +392,7 @@ const Research = () => {
 
                     <h3 className="project-title">
                       <a href={external}>{title}</a>
-                  
+
                       <p className="project-title-2">{author}</p>
                     </h3>
 
@@ -411,8 +411,8 @@ const Research = () => {
 
                     <div className="project-links">
                       {github && (
-                        <a href={github} aria-label="GitHub Link">
-                          <Icon name="GitHub" />
+                        <a href={github} aria-label="arXiv preprint">
+                          <Icon name="Bookmark" />
                         </a>
                       )}
                       {external && (

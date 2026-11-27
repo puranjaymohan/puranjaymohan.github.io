@@ -1,11 +1,11 @@
 {
-  "name": "v4",
-  "description": "Personal Website V4",
+  "name": "puranjay-website",
+  "description": "Personal website of Puranjay Mohan",
   "version": "1.0.0",
-  "author": "Brittany Chiang <brittany.chiang@gmail.com>",
+  "author": "Puranjay Mohan <puranjay12@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bchiang7/v4"
+    "url": "https://github.com/puranjaymohan/puranjaymohan.github.io"
   },
   "keywords": [
     "gatsby"
@@ -19,6 +19,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
+    "stats": "node scripts/fetch-kernel-stats.js",
     "prepare": "husky install",
     "lint-staged": "lint-staged"
   },

@@ -1,4 +1,12 @@
+const kernelStatsQueries = ({ repo, authorName }) => ({
+  commits: `repo:${repo} author-name:"${authorName}"`,
+  reviewed: `repo:${repo} "Reviewed-by: ${authorName}"`,
+  acked: `repo:${repo} "Acked-by: ${authorName}"`,
+});
+
 module.exports = {
+  kernelStatsQueries,
+
   email: 'puranjay12@gmail.com',
 
   socialMedia: [
@@ -30,22 +38,35 @@ module.exports = {
       url: '/#jobs',
     },
     {
-      name: 'OpenSource',
-      url: '/#opensource',
+      name: 'Upstream',
+      url: '/#upstream',
+    },
+    {
+      name: 'Talks',
+      url: '/#talks',
     },
     {
       name: 'Projects',
       url: '/#projects',
     },
     {
-      name: 'Research',
-      url: '/#research',
-    },
-    {
       name: 'Contact',
       url: '/#contact',
     },
   ],
+
+  // Live kernel stats. These are counted with the GitHub commit search API
+  // against the torvalds/linux mirror, so they only cover what is in mainline.
+  // The numbers are fetched at build time (gatsby-node.js) and refreshed in the
+  // browser at most once per cacheHours per visitor (src/hooks/useKernelStats.js).
+  // src/data/kernel-stats.json is the fallback when GitHub can't be reached.
+  kernelStats: {
+    repo: 'torvalds/linux',
+    authorName: 'Puranjay Mohan',
+    cacheHours: 24,
+    logUrl:
+      'https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/log/?qt=author&q=Puranjay+Mohan',
+  },
 
   colors: {
     green: '#64ffda',

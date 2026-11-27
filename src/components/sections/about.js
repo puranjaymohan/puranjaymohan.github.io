@@ -126,8 +126,22 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['Linux Kernel Development', 'Embedded Systems', 'Yocto', 'RTOS', 'Device Drivers', 'Git', 'Systems Programming', 'Electronics', ' ARM Microcontrollers', 'Tensorflow-lite-micro'];
-  const langs = ['C', 'Assembly (x86, Arm)', 'C++', 'Shell Scripting', 'Python', 'Numpy', 'Matplotlib', 'Keras', 'Matlab and Simulink', 'LT SPICE'];
+  const areas = [
+    'BPF JITs',
+    'BPF verifier',
+    'RCU',
+    'Memory models',
+    'Live patching',
+    'Performance work',
+  ];
+  const tools = [
+    'C',
+    'arm64, x86 and RISC-V asm',
+    'perf and bpftool',
+    'herd7 / LKMM litmus tests',
+    'kpatch, objtool',
+    'Python and shell',
+  ];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -137,26 +151,48 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hello! My name is Puranjay Mohan and I enjoy creating things that work at the interface of hardware and software. 
-I was always fascinated by electronics, my interest in embedded systems started when in high school I tried building a line-follower robot.
-Since then I have tried my hands on Linux kernel development, RTOS, PCB design, and everything that I could get my hands on.
-</p><p>
-I have decided to build my career around Linux kernel, Embedded systems, Computer architecture and other related fields.
-I am a strong supporter of open source and love to contribute to projects like Linux and Zephyr
+              My first kernel patch went in back in 2019, while I was an undergrad in Chennai doing
+              driver cleanups. Then came IIO drivers for sensors I had on my desk, a Linux
+              Foundation mentorship on PCIe power management, a Google Summer of Code project that
+              became the upstream ADXL355 driver, and an internship at Texas Instruments upstreaming
+              support for the PRU subsystem on their SoCs.
             </p>
-            <p>My Skills and Knowledge Set:</p>
+            <p>
+              At AWS I worked on the kernel that runs under EC2, and that's where BPF got me. I
+              started by fixing things in the arm64 JIT and never really stopped: the program-pack
+              allocator, BPF exceptions, kCFI support for JITed code, inlined per-CPU helpers. I
+              picked up the arm32 JIT as maintainer in 2023 and the arm64 JIT in 2024, and I review
+              the RISC-V JIT.
+            </p>
+            <p>
+              At Meta I work more broadly across BPF and the kernel pieces it depends on: verifier
+              state pruning, arena memory, iterator inlining, RCU callbacks that finish as soon as a
+              grace period allows, and a memory model for BPF that Paul McKenney and I have been
+              working on, along with a tool to test it on real hardware.
+            </p>
+            <p>
+              The problems I like best sit where the compiler, the CPU's memory ordering and a
+              kernel subsystem all have to agree with each other. I try to measure before I argue,
+              which is why a good share of my recent patches are benchmarks and selftests. I also
+              spend a lot of time reviewing other people's patches, which I think matters as much as
+              writing my own.
+            </p>
+            <p>What I work on:</p>
           </div>
 
           <ul className="skills-list">
-            {skills && skills.map((skill, i) => <li key={i}>{skill}</li>)}
+            {areas.map((item, i) => (
+              <li key={i}>{item}</li>
+            ))}
           </ul>
 
           <div>
-          <p></p>
-          <p>Programming Languages and Frameworks:</p>
+            <p>What I use:</p>
           </div>
           <ul className="skills-list">
-            {langs && langs.map((skill, i) => <li key={i}>{skill}</li>)}
+            {tools.map((item, i) => (
+              <li key={i}>{item}</li>
+            ))}
           </ul>
         </StyledText>
 
